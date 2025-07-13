@@ -1,0 +1,4 @@
+services:
+  nginx-svc: 
+    image: nginx:alpine
+    container_name: react-cont
