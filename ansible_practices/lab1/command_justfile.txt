@@ -1,1 +1,2 @@
-just run nfs_server/nfs_client
+# command to run playbook
+just run nfs_server/nfs_client 
