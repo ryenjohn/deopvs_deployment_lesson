@@ -1,0 +1,11 @@
+---
+- name: Stop Nginx service
+  hosts: myserver # Or the specific host/group where Nginx is running
+  become: true # Required for service management
+
+  tasks:
+    - name: Ensure Nginx service is startup
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true

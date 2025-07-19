@@ -1,0 +1,16 @@
+---
+- name: Install and Start Nginx
+  hosts: myserver
+  become: true # Required for package installation and service management
+
+  tasks:
+    - name: Install Nginx package
+      ansible.builtin.package:
+        name: nginx
+        state: present
+
+    - name: Ensure Nginx service is started and enabled at boot
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
