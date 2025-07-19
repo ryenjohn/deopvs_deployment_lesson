@@ -1,0 +1,1 @@
+just run nfs_server/nfs_client
