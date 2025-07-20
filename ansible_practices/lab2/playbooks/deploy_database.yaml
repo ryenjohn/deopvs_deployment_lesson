@@ -2,7 +2,7 @@
 - name: Deploy Database 
   hosts: server2
   vars_files: 
-    - ../vars/vault_db_credential.yaml 
+    - /vars/vault_db_credential.yaml 
   tasks: 
     - name: Deploy Database 
       debug: 
