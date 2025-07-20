@@ -1,0 +1,14 @@
+---
+- name: Run nginx container
+  hosts: server1
+  vars: 
+    docker_image: "nginx:latest"
+  tasks:
+    - name: Run nginx container
+      community.docker.docker_container:
+        name: nginx_latest_container
+        image: "{{ docker_image }}"
+        state: started
+        restart_policy: always
+        published_ports: 
+            - "3000:80"
