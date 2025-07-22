@@ -3,7 +3,7 @@
   hosts: localhost
   become: yes
   vars:
-    machine_name: gcp-client3
+    machine_name: gcp-instance-ansible
     google_project_id: gentle-bot-466204-d3
     # location where you put the service account.json file
     #service_account_path: /home/dev-user/deopvs_deployment_lesson/ansible_practices/iaC/google_services_account.json
