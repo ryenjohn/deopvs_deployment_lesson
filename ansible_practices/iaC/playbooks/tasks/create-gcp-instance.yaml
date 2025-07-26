@@ -1,0 +1,14 @@
+---
+- name: Create Google Cloud Instance 
+  hosts: localhost 
+  become: yes 
+  vars: 
+    machine_name: master1
+    google_project_id: gentle-bot-466204-d3
+    # location where you put the service account.json file 
+    service_account_path: /home/dev-user/deopvs_deployment_lesson/ansible_practices/iaC2/playbooks/google_services_account.json
+    ssh_public_key_path: /home/dev-user/.ssh/id_ed25519.pub
+  tasks:
+    - name: create first gcp instance 
+      import_tasks: tasks/create-gcp-task.yaml
+# ansible-playbook playbooks/create-gcp-instance.yaml
